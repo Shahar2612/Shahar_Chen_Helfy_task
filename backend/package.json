@@ -1,5 +1,5 @@
 {
-  "name": "helfy",
+  "name": "helfy-backend",
   "version": "1.0.0",
   "description": "REST API for task management",
   "main": "server.js",
