@@ -40,7 +40,7 @@ cd ../frontend
 npm install
 ```
 
-### running the Application
+### running the application
 
 1. start the backend server (from `backend/` directory):
 ```bash
@@ -50,22 +50,22 @@ backend runs on http://localhost:4000
 
 2. start the frontend (from `frontend/` directory):
 ```bash
-npm run dev
+npm start
 ```
 frontend runs on http://localhost:3000
 
-## Features
+## features
 
 - **endless carousel**: smooth infinite scrolling task display
-- **yask management**: create, read, update, and delete tasks
+- **task management**: create, read, update, and delete tasks
 - **priority levels**: high, medium, and low priority indicators
-- **filtering**: milter tasks by completion status
-- **responsive design**: mobile-friendly interface
+- **filtering**: filter tasks by completion status
+- **responsive design**: friendly interface
 
 ## API endpoints
 
 - `GET /api/tasks` - get all tasks
-- `POST /api/tasks` - Create a new task
+- `POST /api/tasks` - create a new task
 - `PUT /api/tasks/:id` - update a task
 - `DELETE /api/tasks/:id` - delete a task
 - `PATCH /api/tasks/:id/toggle` - toggle task completion

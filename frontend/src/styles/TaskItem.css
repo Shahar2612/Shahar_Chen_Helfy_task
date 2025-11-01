@@ -1,9 +1,9 @@
 .task-item {
-  background: white;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s ease;
   min-height: 180px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 
 .task-item.completed .task-title {
   text-decoration: line-through;
-  color: #6b7280;
+  color: var(--text-tertiary);
 }
 
 .task-header {
@@ -87,16 +87,18 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #1f2937;
+  color: var(--text-secondary);
   flex: 1;
+  transition: color 0.3s ease;
 }
 
 .task-description {
-  color: #6b7280;
+  color: var(--text-tertiary);
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 12px;
   flex: 1;
+  transition: color 0.3s ease;
 }
 
 .task-footer {
@@ -105,12 +107,14 @@
   align-items: center;
   margin-top: auto;
   padding-top: 12px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
 }
 
 .task-date {
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--text-tertiary);
+  transition: color 0.3s ease;
 }
 
 .task-completed-badge {

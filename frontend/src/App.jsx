@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TaskList from './components/TaskList';
 import TaskForm from './components/TaskForm';
 import TaskFilter from './components/TaskFilter';
+import ThemeToggle from './components/ThemeToggle';
 import * as taskService from './services/taskService';
 import './styles/App.css';
 
@@ -125,12 +126,15 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>Task Manager</h1>
-        <button 
-          className="btn-add-task"
-          onClick={() => setShowForm(true)}
-        >
-          + New Task
-        </button>
+        <div className="header-actions">
+          <ThemeToggle />
+          <button 
+            className="btn-add-task"
+            onClick={() => setShowForm(true)}
+          >
+            + New Task
+          </button>
+        </div>
       </header>
 
       {error && (

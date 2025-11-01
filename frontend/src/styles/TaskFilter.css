@@ -8,9 +8,9 @@
 
 .filter-btn {
   padding: 10px 20px;
-  border: 2px solid white;
+  border: 2px solid var(--text-primary);
   background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: var(--text-primary);
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
@@ -19,14 +19,27 @@
   backdrop-filter: blur(10px);
 }
 
+[data-theme='dark'] .filter-btn {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
 .filter-btn:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
+[data-theme='dark'] .filter-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .filter-btn.active {
-  background: white;
+  background: var(--button-bg);
   color: #667eea;
-  border-color: white;
+  border-color: var(--button-bg);
+}
+
+[data-theme='dark'] .filter-btn.active {
+  color: #667eea;
 }
 

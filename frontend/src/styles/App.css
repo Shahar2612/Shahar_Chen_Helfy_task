@@ -15,27 +15,34 @@
 
 .app-header h1 {
   font-size: 36px;
-  color: white;
+  color: var(--text-primary);
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2px 4px var(--shadow);
+  transition: color 0.3s ease;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .btn-add-task {
   padding: 12px 24px;
-  background: white;
-  color: #667eea;
+  background: var(--button-bg);
+  color: var(--button-text);
   border: none;
   border-radius: 24px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .btn-add-task:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px var(--shadow-hover);
 }
 
 .app-loading {
@@ -46,9 +53,10 @@
 }
 
 .loading-spinner {
-  color: white;
+  color: var(--text-primary);
   font-size: 24px;
   animation: pulse 1.5s ease-in-out infinite;
+  transition: color 0.3s ease;
 }
 
 @keyframes pulse {
@@ -61,8 +69,8 @@
 }
 
 .error-message {
-  background: rgba(239, 68, 68, 0.9);
-  color: white;
+  background: var(--error-bg);
+  color: var(--text-primary);
   padding: 16px 20px;
   border-radius: 12px;
   margin-bottom: 24px;
@@ -70,10 +78,11 @@
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
 }
 
 .error-message button {
-  background: white;
+  background: var(--button-bg);
   color: #ef4444;
   border: none;
   padding: 8px 16px;
@@ -84,7 +93,8 @@
 }
 
 .error-message button:hover {
-  background: #fee2e2;
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
